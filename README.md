@@ -1,62 +1,46 @@
-# CrewAI Project
+# CREW-AI
 
-This project demonstrates the use of CrewAI agents for automated content creation and movie Q&A functionality.
+Multi-agent AI workflows built with CrewAI, demonstrating automated blog content generation and a movie Q&A agent.
 
-## 🚀 Quick Start
+## Overview
 
-1. **Clone the repository**
-   ```bash
-   git clone <your-repo-url>
-   cd crew-ai
-   ```
+This project showcases the CrewAI framework for orchestrating AI agents:
 
-2. **Install dependencies**
-   ```bash
-   pip install crewai crewai-tools python-dotenv
-   ```
+- **Blog Generation Crew** -- A researcher agent gathers information on a given topic, then a writer agent produces a polished blog post.
+- **Movie Q&A Demo** -- An interactive agent that answers movie-related questions using web search.
 
-3. **Set up environment variables**
-   ```bash
-   cp .env.example .env
-   # Edit .env file with your actual API keys
-   ```
+## Tech Stack
 
-4. **Run the CrewAI agents**
-   ```bash
-   python CREWAIAGENTS.py
-   ```
+- Python 3.10+
+- [CrewAI](https://github.com/joaomdmoura/crewAI) (multi-agent orchestration)
+- OpenAI API (LLM backend)
+- python-dotenv (environment management)
 
-5. **Run the movie Q&A demo**
-   ```bash
-   python movie_qa_demo.py
-   ```
+## Setup
 
-## 📁 Project Structure
+```bash
+git clone https://github.com/dhayanand-ss/CREW-AI.git
+cd CREW-AI
+pip install crewai crewai-tools python-dotenv
+cp .env.example .env
+# Add your OPENAI_API_KEY to .env
+```
 
-- `CREWAIAGENTS.py` - Main CrewAI script for blog content generation
-- `movie_qa_demo.py` - Movie Q&A agent demonstration
-- `INSTALLATION_GUIDE.md` - Detailed installation and setup guide
-- `.env.example` - Template for environment variables
-- `.gitignore` - Git ignore rules for sensitive files
+## Usage
 
-## 🔐 Security
+```bash
+# Run the blog generation crew
+python CREWAIAGENTS.py
 
-- Never commit your `.env` file to version control
-- All API keys and sensitive information are stored in environment variables
-- Use `.env.example` as a template for your local configuration
+# Run the movie Q&A demo
+python movie_qa_demo.py
+```
 
-## 📚 Documentation
+## Project Structure
 
-See `INSTALLATION_GUIDE.md` for detailed setup instructions and troubleshooting.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Ensure no sensitive information is committed
-5. Submit a pull request
-
-## 📄 License
-
-This project is for educational and demonstration purposes.
+| File | Description |
+|------|-------------|
+| `CREWAIAGENTS.py` | Main CrewAI blog researcher + writer pipeline |
+| `movie_qa_demo.py` | Movie Q&A agent with web search |
+| `INSTALLATION_GUIDE.md` | Detailed setup instructions |
+| `.env.example` | Environment variable template |
